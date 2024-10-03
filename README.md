@@ -3,7 +3,7 @@
 
 This is a tool which converts videos to the resources required to watch it in Minecraft 1.20.4. It is multiplayer friendly so you can watch with friends!
 
-##Notes
+## Notes
 This project requires FFmpeg, FFprobe and ImageMagick to run.
 
 Tested with FFmpeg 6.1.
