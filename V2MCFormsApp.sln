@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "V2MCFormsApp", "V2MCFormsApp\V2MCFormsApp.csproj", "{837E96F9-3965-4BC1-BA33-D543062A4377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoToMCResourcePackConverterLib", "..\VideoToMCResourcePackConverter\VideoToMCResourcePackConverterLib\VideoToMCResourcePackConverterLib.csproj", "{4DEC8629-6614-4E73-BB46-A524C5D0DE3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{837E96F9-3965-4BC1-BA33-D543062A4377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837E96F9-3965-4BC1-BA33-D543062A4377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837E96F9-3965-4BC1-BA33-D543062A4377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837E96F9-3965-4BC1-BA33-D543062A4377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEC8629-6614-4E73-BB46-A524C5D0DE3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEC8629-6614-4E73-BB46-A524C5D0DE3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEC8629-6614-4E73-BB46-A524C5D0DE3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEC8629-6614-4E73-BB46-A524C5D0DE3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4157058-3132-497D-BE0F-B3903829F907}
+	EndGlobalSection
+EndGlobal
