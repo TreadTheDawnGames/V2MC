@@ -6,6 +6,6 @@ This is a tool which converts videos to the resources required to watch it in Mi
 ## Notes
 I am working on an installer. Cloning this repo will probably not result in a functioning app.
 
-This project requires FFmpeg and FFprobe.
+This project uses FFmpeg, FFprobe and ImageMagick.NET.
 
 Tested with FFmpeg 6.1.
