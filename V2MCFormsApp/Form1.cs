@@ -1006,7 +1006,7 @@ namespace V2MCFormsApp
 
         private void OpenGitHubLink(object sender, EventArgs e)
         {
-            OpenUrl("https://github.com/treadthedawngames");
+            OpenUrl("https://github.com/treadthedawngames/V2MC");
         }
 
         private void OpenFFmpegLink(object sender, EventArgs e)
