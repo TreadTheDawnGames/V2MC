@@ -4,7 +4,7 @@
 This is a tool which converts videos to the resources required to watch it in Minecraft 1.20.4. It is multiplayer friendly so you can watch with friends!
 
 ## Basic Instructions
-Upload a video.
+	Upload a video.
 
 	Change the Pack Name if you desire (this will be how it appears in the Minecraft datapack).
 
