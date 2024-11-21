@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BuiltInMedia\linkedinIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\VideoToMCResourcePackConverter\VideoToMCResourcePackConverterLib\VideoToMCResourcePackConverterLib.csproj" />
   </ItemGroup>
 
@@ -38,13 +42,31 @@
 
   <ItemGroup>
     <None Update="BuiltInMedia\backgroundImage.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BuiltInMedia\FFmpegIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BuiltInMedia\GitHubIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BuiltInMedia\ImgMagickIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BuiltInMedia\TTDG-24x24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BuiltInMedia\v2mcIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="ConverterLib\FFMpegCore.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ffprobe.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="v2mcv2mcInstructions.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

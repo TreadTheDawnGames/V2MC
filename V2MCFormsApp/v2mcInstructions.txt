@@ -1,0 +1,128 @@
+THIS CONVERTER IS DESIGNED FOR MINECRAFT VERSION 1.20.4
+
+Last updated 11/20/2024
+
+
+First time setup:
+	If the program does not automatically detect FFmpeg and FFProbe, it will ask you if you 
+	have it installed elsewhere. If you do not, it will ask if you want to download it 
+	automatically. You cannot run the program without FFmpeg and FFProbe.
+
+
+v2mcInstructions:
+
+	Upload a video.
+
+	Change the Pack Name if you desire (this will be how it appears in the Minecraft datapack).
+
+	Choose the scale at which the video will be shown in Minecraft. You can use the preview to get it 
+	just right. (Note the slider in the bottom left to select different freeze-frames).
+
+	Press Convert! and wait... This could take a while depending on the length of the video.
+
+	Load up your minecraft world, type "/reload" (without quotation marks), and follow the 
+	v2mcInstructions.
+
+	When you're ready to watch, enable the resource pack by pausing the game, navigating to
+	options -> resource packs, and activating the pack. When you click "Done," Minecraft will 
+	load the resource pack into memory. THIS MAY TAKE A LONG TIME DEPENDING ON THE LENGTH OF 
+	YOUR VIDEO.
+
+	If you see a purple and black square (not a cube) after enabling the pack, it's working! 
+
+	If you get an error after loading the resource pack, or see a black and purple CUBE, the 
+	pack is too big and you will have to lower its size by doing one or more of the following:
+
+	1: Lower the resolution (Scale or Image Width/Height)
+	2: Reduce the time which the program converts (Start/End Time)
+	3: Reduce the framerate (Ticks per Second)
+	4: Tick "End Audio on Last Frame" to prevent converting extra audio.
+
+
+(Use following commands without quotation marks)
+"/reload"					--- reloads any installed datapacks
+"/function {PackName}:play" --- starts the video from the beginning. 
+"/function {PackName}:stop" --- stops the video.
+				The video cannot be paused.
+
+
+
+IF YOU DID NOT AUTO INSTALL:
+	You will need to install the two files in your output directory (default is Downloads), {PackName}ResourcePack.zip and {PackName}Datapack.zip.
+
+	Install the resource pack by putting it in Minecraft's resourcepacks folder: C:\Users\{USERNAME}\AppData/Roaming\.minecraft\resourcepacks
+
+	Install the datapack by moving it to the datapacks folder of your world: C:\Users\{USERNAME}\AppData/Roaming\.minecraft\Saves\{WorldName}\datapacks
+
+
+
+Details:
+
+Upload File:
+	The video file to convert.
+
+Output Path:
+	The path to which the program will output the zipped resource and datapacks.
+
+Auto Install:
+	If ticked, instead of outputting zipped files, the program will output the packs directly 
+	into Minecraft. V2MC will detect if you have a Minecraft world with the same name as your
+	Upload File and output the datapack to its datapacks folder.
+
+Resource Path Path:
+	The detected Minecraft resource pack directory.
+
+Data Pack Path:
+	If no world was detected, it will will remain blank, and you will have to provide an output
+	path for the datapack.
+
+Pack Name:
+	The name the video will have in the Minecraft datapack fuctions. Defaults to the name of the
+	Upload File.
+
+Scale:
+	The pixel scale the video will appear in Minecraft. Defaults to n, where n results in the width 
+	equaling 48px.
+
+Screen Scale:
+	The scale the physical screen will appear in Minecraft. Background scale is accurate to ingame 
+	size.
+
+Use Width/Height:
+	If ticked, the program will override scale with individual image Height and Width, and Screen 
+	Width and Height.
+
+Ticks per Second:
+	The framerate at which to play the video in Minecraft. Defaults to 20. If changed, additional 
+	setup will be required, but it is explained upon datapack reload.
+
+Start time:
+	The time at which the program should start converting (useful for intro credits). 
+	Defaults to 00:00:00.
+
+End time:
+	The time at which the program should stop converting (useful for end credits). Defaults to
+	the end time of the Upload File.
+
+File duration:
+	Displays the length of the Upload File.
+
+Reload preview:
+	Realoads the image preview with current settings.
+
+Reset Times:
+	Resets Start and End times to their defaults.
+
+End Audio on Last Frame:
+	When ticked, the program will not output audio past the end time. (Useful for cutting off
+	credit songs).
+
+Slider:
+	Chooses display image to diplay in the preview.
+
+Cancel:
+	Cancels an active convertion process.
+
+Convert!:
+	Starts the conversion process. This may take a while depending on the lenght of the Upload
+	File.

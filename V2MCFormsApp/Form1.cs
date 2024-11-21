@@ -8,6 +8,14 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Security.Permissions;
 using FFMpegCore.Enums;
+using FFMpegCore.Helpers;
+using Microsoft.VisualBasic;
+using System.Net;
+using System.IO.Compression;
+using System.Drawing.Design;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.IO;
 
 
 namespace V2MCFormsApp
@@ -52,9 +60,16 @@ namespace V2MCFormsApp
 
         APIConfiguration config;
 
+
+
         public V2MC()
         {
             InitializeComponent();
+
+            //if ffmpeg does not exist
+            //  ask user for ffmpeg path
+            //      if no path
+            //          ask if want to install
 
             ResourcePackPathBox.Text = Path.Combine(Utils.FindMinecraftPackFolder(), "resourcepacks");
             OutputPathTextBox.Text = Utils.FindDownloadsPath();
@@ -68,13 +83,19 @@ namespace V2MCFormsApp
             ScreenScale = (float)ScreenScaleUpDown.Value;
             ScreenWidthScale = (float)ScreenWidthUpDown.Value;
             ScreenHeightScale = (float)ScreenHeightUpDown.Value;
+            Application.ApplicationExit += (sender, eventArgs) => CloseApplication(sender, eventArgs);
 
             if (!Directory.Exists(previewDirectory))
                 Directory.CreateDirectory(previewDirectory);
 
             Logger = new FormLogger(ILogger.LogLevel.Debug, StatusLabel);
 
+
+            //Application.EnterThreadModal += (thing, thing2) => MessageBox.Show("EnteringThreadModal");
+
         }
+
+
 
         public void UploadPathTextBox_DragDrop(object sender, DragEventArgs e)
         {
@@ -563,7 +584,7 @@ namespace V2MCFormsApp
                        }
                        catch (Exception e)
                        {
-                               CancelButton.Invoke(() => { CancelButton.Enabled = false; });
+                           CancelButton.Invoke(() => { CancelButton.Enabled = false; });
                            if (e is CannotOverwriteException)
                            {
 
@@ -574,7 +595,7 @@ namespace V2MCFormsApp
                                    api = new API(config);
                                    try
                                    {
-                               CancelButton.Invoke(() => { CancelButton.Enabled = true; });
+                                       CancelButton.Invoke(() => { CancelButton.Enabled = true; });
                                        api.Generate();
                                    }
                                    catch (Exception e2)
@@ -605,7 +626,7 @@ namespace V2MCFormsApp
                                {
 
                                    Logger?.Log(e.Message, ILogger.LogLevel.Progress);
-                                    MessageBox.Show(e.Message + "\n" + e.InnerException?.Message + "\n" + e.StackTrace, "Error");
+                                   MessageBox.Show(e.Message + "\n" + e.InnerException?.Message + "\n" + e.StackTrace, "Error");
                                }
                            }
                        }
@@ -618,13 +639,13 @@ namespace V2MCFormsApp
             }
             catch (Exception ex)
             {
-                
-                
 
-                    Logger?.Log(ex.Message, ILogger.LogLevel.Progress);
-                    MessageBox.Show(ex.Message, "Error");
-                
-                    return;
+
+
+                Logger?.Log(ex.Message, ILogger.LogLevel.Progress);
+                MessageBox.Show(ex.Message, "Error");
+
+                return;
             }
             finally
             {
@@ -672,7 +693,11 @@ namespace V2MCFormsApp
             VideoSlider_Scroll(null, null);
 
         }
-
+        void CloseApplication(object sender, EventArgs e)
+        {
+            //MessageBox.Show("closing");
+            CancelButton_Click(sender, e);
+        }
         private void ParseStartTime(object sender, EventArgs e)
         {
 
@@ -826,7 +851,7 @@ namespace V2MCFormsApp
         {
             foreach (Control c in Controls)
             {
-                
+
 
                 if (enable)
                 {
@@ -846,7 +871,7 @@ namespace V2MCFormsApp
                     }
                 }
 
-                
+
                 c.Enabled = enable;
             }
         }
@@ -921,5 +946,110 @@ namespace V2MCFormsApp
                 Logger?.Log("Nothing to cancel", ILogger.LogLevel.Progress);
             }
         }
+
+        private void V2MC_Load(object sender, EventArgs e)
+        {
+
+            if (!FFmpegLoader.FFMpegSetup(ffmpegFileDialog))
+            {
+                //MessageBox.Show("Fatal error setting up FFmpeg. Closing the program.", "Fatal Error");
+                Close();
+            }
+
+        }
+
+        private void OpenFFmpegLink(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenUrl("https://ffmpeg.org/");
+        }
+
+        //https://stackoverflow.com/questions/4580263/how-to-open-in-default-browser-in-c-sharp
+        private void OpenUrl(string url)
+        {
+            try
+            {
+                Process.Start(url);
+            }
+            catch
+            {
+                // hack because of this: https://github.com/dotnet/corefx/issues/10361
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    url = url.Replace("&", "^&");
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    Process.Start("xdg-open", url);
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                {
+                    Process.Start("open", url);
+                }
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+        private void OpenItchLink(object sender, EventArgs e)
+        {
+            OpenUrl("https://treadthedawngames.itch.io/");
+
+        }
+
+        private void OpenImgMgkLink(object sender, EventArgs e)
+        {
+            OpenUrl("https://imagemagick.org/");
+        }
+
+        private void OpenGitHubLink(object sender, EventArgs e)
+        {
+            OpenUrl("https://github.com/treadthedawngames");
+        }
+
+        private void OpenFFmpegLink(object sender, EventArgs e)
+        {
+            OpenUrl("https://ffmpeg.org/");
+        }
+
+        //https://stackoverflow.com/questions/11365984/c-sharp-open-file-with-default-application-and-parameters
+        private void HelpButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    OpenUrl("https://treadthedawn.games/Downloads/v2mcInstructions.txt");
+                }
+                return;
+            }
+            catch { }
+
+            if (File.Exists("v2mcInstructions.txt"))
+            {
+                try
+                {
+
+                    using Process fileopener = new Process();
+
+                    fileopener.StartInfo.FileName = "explorer";
+                    fileopener.StartInfo.Arguments = "\"" + "v2mcInstructions.txt" + "\"";
+                    fileopener.Start();
+
+                }
+                catch
+                {
+                    MessageBox.Show("There was an error opening v2mcInstructions.txt");
+                }
+            }
+            else
+            {
+                MessageBox.Show("v2mcInstructions.txt is missing", "Help not Found");
+            }
+        }
+
+      
     }
 }

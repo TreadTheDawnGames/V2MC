@@ -121,10 +121,22 @@
   <data name="backgroundImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\BuiltInMedia\backgroundImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgroundImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\BuiltInMedia\backgroundImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="githubIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BuiltInMedia\githubIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="githubIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BuiltInMedia\githubIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backgroundImage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\BuiltInMedia\backgroundImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BuiltInMedia\backgroundImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="githubIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BuiltInMedia\githubIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linkedinIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BuiltInMedia\linkedinIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

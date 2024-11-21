@@ -34,8 +34,17 @@ namespace V2MCFormsApp
                     return;
                 }
 
-
-                LogBox.Invoke(() => LogBox.Text = message);
+                try
+                {
+                    LogBox.Invoke(() => LogBox.Text = message);
+                }
+                catch (Exception ex)
+                {
+                    if (ex is not InvalidOperationException)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
 
             

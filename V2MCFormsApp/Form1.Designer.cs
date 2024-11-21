@@ -84,6 +84,14 @@
             WidthUpDown = new NumericUpDown();
             HeightUpDown = new NumericUpDown();
             CancelButton = new Button();
+            openFileDialog2 = new OpenFileDialog();
+            openFileDialog3 = new OpenFileDialog();
+            ffmpegFileDialog = new OpenFileDialog();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)PreviewImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)VideoSlider).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TicksPerSecondUpDown).BeginInit();
@@ -93,6 +101,10 @@
             ((System.ComponentModel.ISupportInitialize)ScaleUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)WidthUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)HeightUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // UploadPathTextBox
@@ -111,18 +123,22 @@
             // UploadLable
             // 
             UploadLable.AutoSize = true;
+            UploadLable.BackColor = Color.Transparent;
+            UploadLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             UploadLable.Location = new Point(12, 9);
             UploadLable.Name = "UploadLable";
-            UploadLable.Size = new Size(66, 15);
+            UploadLable.Size = new Size(68, 15);
             UploadLable.TabIndex = 2;
             UploadLable.Text = "Upload File";
             // 
             // ResoucePackPath
             // 
             ResoucePackPath.AutoSize = true;
+            ResoucePackPath.BackColor = Color.Transparent;
+            ResoucePackPath.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ResoucePackPath.Location = new Point(12, 93);
             ResoucePackPath.Name = "ResoucePackPath";
-            ResoucePackPath.Size = new Size(110, 15);
+            ResoucePackPath.Size = new Size(116, 15);
             ResoucePackPath.TabIndex = 4;
             ResoucePackPath.Text = "Resource Pack Path";
             // 
@@ -140,9 +156,11 @@
             // DataPackPathLable
             // 
             DataPackPathLable.AutoSize = true;
+            DataPackPathLable.BackColor = Color.Transparent;
+            DataPackPathLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             DataPackPathLable.Location = new Point(12, 122);
             DataPackPathLable.Name = "DataPackPathLable";
-            DataPackPathLable.Size = new Size(86, 15);
+            DataPackPathLable.Size = new Size(90, 15);
             DataPackPathLable.TabIndex = 6;
             DataPackPathLable.Text = "Data Pack Path";
             // 
@@ -170,9 +188,11 @@
             // PackNameLable
             // 
             PackNameLable.AutoSize = true;
+            PackNameLable.BackColor = Color.Transparent;
+            PackNameLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             PackNameLable.Location = new Point(12, 156);
             PackNameLable.Name = "PackNameLable";
-            PackNameLable.Size = new Size(67, 15);
+            PackNameLable.Size = new Size(69, 15);
             PackNameLable.TabIndex = 9;
             PackNameLable.Text = "Pack Name";
             // 
@@ -189,50 +209,60 @@
             // ScaleLable
             // 
             ScaleLable.AutoSize = true;
+            ScaleLable.BackColor = Color.Transparent;
+            ScaleLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ScaleLable.Location = new Point(25, 185);
             ScaleLable.Name = "ScaleLable";
-            ScaleLable.Size = new Size(34, 15);
+            ScaleLable.Size = new Size(36, 15);
             ScaleLable.TabIndex = 11;
             ScaleLable.Text = "Scale";
             // 
             // WidthLable
             // 
             WidthLable.AutoSize = true;
+            WidthLable.BackColor = Color.Transparent;
+            WidthLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             WidthLable.Location = new Point(9, 267);
             WidthLable.Name = "WidthLable";
-            WidthLable.Size = new Size(75, 15);
+            WidthLable.Size = new Size(79, 15);
             WidthLable.TabIndex = 13;
             WidthLable.Text = "Image Width";
             // 
             // HeightLable
             // 
             HeightLable.AutoSize = true;
+            HeightLable.BackColor = Color.Transparent;
+            HeightLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             HeightLable.Location = new Point(5, 296);
             HeightLable.Name = "HeightLable";
-            HeightLable.Size = new Size(79, 15);
+            HeightLable.Size = new Size(83, 15);
             HeightLable.TabIndex = 15;
             HeightLable.Text = "Image Height";
             // 
             // StartTimeLable
             // 
             StartTimeLable.AutoSize = true;
+            StartTimeLable.BackColor = Color.Transparent;
+            StartTimeLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             StartTimeLable.Location = new Point(-2, 419);
             StartTimeLable.Margin = new Padding(0, 3, 0, 3);
             StartTimeLable.Name = "StartTimeLable";
-            StartTimeLable.Size = new Size(58, 15);
+            StartTimeLable.Size = new Size(64, 15);
             StartTimeLable.TabIndex = 17;
             StartTimeLable.Text = "Start time";
             // 
             // ScaleOverrideCheckBox
             // 
             ScaleOverrideCheckBox.AutoSize = true;
+            ScaleOverrideCheckBox.BackColor = Color.Transparent;
+            ScaleOverrideCheckBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ScaleOverrideCheckBox.Location = new Point(27, 240);
             ScaleOverrideCheckBox.Name = "ScaleOverrideCheckBox";
             ScaleOverrideCheckBox.RightToLeft = RightToLeft.Yes;
-            ScaleOverrideCheckBox.Size = new Size(124, 19);
+            ScaleOverrideCheckBox.Size = new Size(130, 19);
             ScaleOverrideCheckBox.TabIndex = 12;
             ScaleOverrideCheckBox.Text = "Use Width/Height ";
-            ScaleOverrideCheckBox.UseVisualStyleBackColor = true;
+            ScaleOverrideCheckBox.UseVisualStyleBackColor = false;
             ScaleOverrideCheckBox.CheckedChanged += ScaleOverrideCheckBox_CheckedChanged;
             // 
             // StartSecondsTextBox
@@ -283,6 +313,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(89, 419);
             label2.Margin = new Padding(0, 3, 0, 3);
             label2.Name = "label2";
@@ -293,6 +324,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Location = new Point(128, 419);
             label3.Margin = new Padding(0, 3, 0, 3);
             label3.Name = "label3";
@@ -303,6 +335,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Location = new Point(128, 448);
             label1.Margin = new Padding(0, 3, 0, 3);
             label1.Name = "label1";
@@ -313,6 +346,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Location = new Point(89, 448);
             label4.Margin = new Padding(0, 3, 0, 3);
             label4.Name = "label4";
@@ -368,10 +402,12 @@
             // EndAtLable
             // 
             EndAtLable.AutoSize = true;
+            EndAtLable.BackColor = Color.Transparent;
+            EndAtLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             EndAtLable.Location = new Point(-2, 448);
             EndAtLable.Margin = new Padding(0, 3, 0, 3);
             EndAtLable.Name = "EndAtLable";
-            EndAtLable.Size = new Size(54, 15);
+            EndAtLable.Size = new Size(56, 15);
             EndAtLable.TabIndex = 27;
             EndAtLable.Text = "End time";
             // 
@@ -387,9 +423,11 @@
             // OutputPathLable
             // 
             OutputPathLable.AutoSize = true;
+            OutputPathLable.BackColor = Color.Transparent;
+            OutputPathLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             OutputPathLable.Location = new Point(12, 38);
             OutputPathLable.Name = "OutputPathLable";
-            OutputPathLable.Size = new Size(72, 15);
+            OutputPathLable.Size = new Size(75, 15);
             OutputPathLable.TabIndex = 35;
             OutputPathLable.Text = "Output Path";
             // 
@@ -406,19 +444,20 @@
             // AutoInstallCheckBox
             // 
             AutoInstallCheckBox.AutoSize = true;
+            AutoInstallCheckBox.BackColor = Color.Transparent;
+            AutoInstallCheckBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             AutoInstallCheckBox.Location = new Point(12, 64);
             AutoInstallCheckBox.Name = "AutoInstallCheckBox";
             AutoInstallCheckBox.RightToLeft = RightToLeft.Yes;
-            AutoInstallCheckBox.Size = new Size(86, 19);
+            AutoInstallCheckBox.Size = new Size(89, 19);
             AutoInstallCheckBox.TabIndex = 5;
             AutoInstallCheckBox.Text = "Auto Install";
             toolTip1.SetToolTip(AutoInstallCheckBox, resources.GetString("AutoInstallCheckBox.ToolTip"));
-            AutoInstallCheckBox.UseVisualStyleBackColor = true;
+            AutoInstallCheckBox.UseVisualStyleBackColor = false;
             AutoInstallCheckBox.CheckedChanged += AutoInstallCheckBox_CheckedChanged;
             // 
             // openFileDialog1
             // 
-            openFileDialog1.FileName = "openFileDialog1";
             openFileDialog1.FileOk += openFileDialog1_FileOk;
             // 
             // BrowseButton
@@ -464,14 +503,16 @@
             // EndAudioOnLastFrameCheckBox
             // 
             EndAudioOnLastFrameCheckBox.AutoSize = true;
+            EndAudioOnLastFrameCheckBox.BackColor = Color.Transparent;
+            EndAudioOnLastFrameCheckBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             EndAudioOnLastFrameCheckBox.Location = new Point(-2, 518);
             EndAudioOnLastFrameCheckBox.Name = "EndAudioOnLastFrameCheckBox";
             EndAudioOnLastFrameCheckBox.RightToLeft = RightToLeft.Yes;
-            EndAudioOnLastFrameCheckBox.Size = new Size(158, 19);
+            EndAudioOnLastFrameCheckBox.Size = new Size(161, 19);
             EndAudioOnLastFrameCheckBox.TabIndex = 21;
             EndAudioOnLastFrameCheckBox.Text = "End Audio on Last Frame";
             toolTip1.SetToolTip(EndAudioOnLastFrameCheckBox, "Whether to end the audio when there are no more frames to show.");
-            EndAudioOnLastFrameCheckBox.UseVisualStyleBackColor = true;
+            EndAudioOnLastFrameCheckBox.UseVisualStyleBackColor = false;
             // 
             // StatusLabel
             // 
@@ -484,9 +525,11 @@
             // FileDurationLabelLabel
             // 
             FileDurationLabelLabel.AutoSize = true;
+            FileDurationLabelLabel.BackColor = Color.Transparent;
+            FileDurationLabelLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             FileDurationLabelLabel.Location = new Point(-2, 471);
             FileDurationLabelLabel.Name = "FileDurationLabelLabel";
-            FileDurationLabelLabel.Size = new Size(76, 15);
+            FileDurationLabelLabel.Size = new Size(79, 15);
             FileDurationLabelLabel.TabIndex = 0;
             FileDurationLabelLabel.Text = "File duration:";
             // 
@@ -512,9 +555,11 @@
             // TPSLabel
             // 
             TPSLabel.AutoSize = true;
+            TPSLabel.BackColor = Color.Transparent;
+            TPSLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             TPSLabel.Location = new Point(-1, 389);
             TPSLabel.Name = "TPSLabel";
-            TPSLabel.Size = new Size(95, 15);
+            TPSLabel.Size = new Size(101, 15);
             TPSLabel.TabIndex = 46;
             TPSLabel.Text = "Ticks per Second";
             // 
@@ -574,7 +619,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(90, 489);
+            button1.Location = new Point(99, 489);
             button1.Name = "button1";
             button1.Size = new Size(77, 24);
             button1.TabIndex = 48;
@@ -585,27 +630,33 @@
             // ScreenScaleLabel
             // 
             ScreenScaleLabel.AutoSize = true;
+            ScreenScaleLabel.BackColor = Color.Transparent;
+            ScreenScaleLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ScreenScaleLabel.Location = new Point(6, 214);
             ScreenScaleLabel.Name = "ScreenScaleLabel";
-            ScreenScaleLabel.Size = new Size(72, 15);
+            ScreenScaleLabel.Size = new Size(78, 15);
             ScreenScaleLabel.TabIndex = 49;
             ScreenScaleLabel.Text = "Screen Scale";
             // 
             // ScreenWidthLabel
             // 
             ScreenWidthLabel.AutoSize = true;
+            ScreenWidthLabel.BackColor = Color.Transparent;
+            ScreenWidthLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ScreenWidthLabel.Location = new Point(7, 327);
             ScreenWidthLabel.Name = "ScreenWidthLabel";
-            ScreenWidthLabel.Size = new Size(77, 15);
+            ScreenWidthLabel.Size = new Size(83, 15);
             ScreenWidthLabel.TabIndex = 51;
             ScreenWidthLabel.Text = "Screen Width";
             // 
             // ScreenHeightLabel
             // 
             ScreenHeightLabel.AutoSize = true;
+            ScreenHeightLabel.BackColor = Color.Transparent;
+            ScreenHeightLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ScreenHeightLabel.Location = new Point(6, 356);
             ScreenHeightLabel.Name = "ScreenHeightLabel";
-            ScreenHeightLabel.Size = new Size(81, 15);
+            ScreenHeightLabel.Size = new Size(87, 15);
             ScreenHeightLabel.TabIndex = 56;
             ScreenHeightLabel.Text = "Screen Height";
             // 
@@ -655,6 +706,76 @@
             CancelButton.UseVisualStyleBackColor = true;
             CancelButton.Click += CancelButton_Click;
             // 
+            // openFileDialog2
+            // 
+            openFileDialog2.FileName = "openFileDialog1";
+            // 
+            // openFileDialog3
+            // 
+            openFileDialog3.FileName = "openFileDialog1";
+            // 
+            // ffmpegFileDialog
+            // 
+            ffmpegFileDialog.FileName = "ffmpeg.exe";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(640, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(24, 24);
+            pictureBox1.TabIndex = 63;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += OpenGitHubLink;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(610, 38);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(24, 24);
+            pictureBox2.TabIndex = 64;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += OpenFFmpegLink;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Cursor = Cursors.Hand;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(610, 6);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(24, 24);
+            pictureBox4.TabIndex = 66;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += OpenItchLink;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Cursor = Cursors.Hand;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(640, 38);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(24, 24);
+            pictureBox3.TabIndex = 65;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += OpenImgMgkLink;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(610, 68);
+            button2.Name = "button2";
+            button2.Size = new Size(57, 23);
+            button2.TabIndex = 67;
+            button2.Text = "Help";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += HelpButton_Click;
+            // 
             // V2MC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -662,6 +783,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(678, 647);
+            Controls.Add(button2);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(CancelButton);
             Controls.Add(HeightUpDown);
             Controls.Add(WidthUpDown);
@@ -714,8 +840,11 @@
             Controls.Add(UploadPathTextBox);
             Controls.Add(PreviewImage);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "V2MC";
             Text = "Video to Resource Pack";
+            Load += V2MC_Load;
             ((System.ComponentModel.ISupportInitialize)PreviewImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)VideoSlider).EndInit();
             ((System.ComponentModel.ISupportInitialize)TicksPerSecondUpDown).EndInit();
@@ -725,6 +854,10 @@
             ((System.ComponentModel.ISupportInitialize)ScaleUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)WidthUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)HeightUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -784,5 +917,13 @@
         private NumericUpDown WidthUpDown;
         private NumericUpDown HeightUpDown;
         private Button CancelButton;
+        private OpenFileDialog openFileDialog2;
+        private OpenFileDialog openFileDialog3;
+        private OpenFileDialog ffmpegFileDialog;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private Button button2;
     }
 }
