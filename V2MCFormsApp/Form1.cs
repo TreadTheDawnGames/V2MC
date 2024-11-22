@@ -154,6 +154,7 @@ namespace V2MCFormsApp
 
         private void CreatePreviewImage(string inputFile, TimeSpan atTime, int previewIndex)
         {
+            
             if (inputFile == null || inputFile == "" || inputFile == string.Empty)
             {
                 throw new Exception("No file uploaded.");
@@ -374,7 +375,7 @@ namespace V2MCFormsApp
                     throw new Exception("Unable to parse " + numberBox);
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 Logger?.Log("Unable to parse " + numberBox.Name, ILogger.LogLevel.Progress);
                 return 0;
@@ -387,7 +388,7 @@ namespace V2MCFormsApp
 
                 return Convert.ToDouble(numberBox.Value);
             }
-            catch (Exception ex)
+            catch
             {
                 Logger?.Log("Unable to parse " + numberBox.Name, ILogger.LogLevel.Progress);
                 return 0;
@@ -750,7 +751,10 @@ namespace V2MCFormsApp
 
         private void PreloadPreviewImages(string inputFile)
         {
-
+            foreach (var imageInDirectory in Directory.GetFiles(previewDirectory))
+            {
+                File.Delete(imageInDirectory);
+            }
             for (int i = 0; i <= 10; i++)
             {
 
@@ -1049,7 +1053,5 @@ namespace V2MCFormsApp
                 MessageBox.Show("v2mcInstructions.txt is missing", "Help not Found");
             }
         }
-
-      
     }
 }

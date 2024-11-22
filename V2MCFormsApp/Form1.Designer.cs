@@ -92,6 +92,7 @@
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             button2 = new Button();
+            SeekLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)PreviewImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)VideoSlider).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TicksPerSecondUpDown).BeginInit();
@@ -111,9 +112,9 @@
             // 
             UploadPathTextBox.AccessibleDescription = "";
             UploadPathTextBox.AllowDrop = true;
-            UploadPathTextBox.Location = new Point(84, 6);
+            UploadPathTextBox.Location = new Point(103, 6);
             UploadPathTextBox.Name = "UploadPathTextBox";
-            UploadPathTextBox.Size = new Size(455, 23);
+            UploadPathTextBox.Size = new Size(449, 23);
             UploadPathTextBox.TabIndex = 1;
             UploadPathTextBox.Tag = "";
             UploadPathTextBox.DragDrop += UploadPathTextBox_DragDrop;
@@ -125,31 +126,31 @@
             UploadLable.AutoSize = true;
             UploadLable.BackColor = Color.Transparent;
             UploadLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            UploadLable.Location = new Point(12, 9);
+            UploadLable.Location = new Point(13, 9);
             UploadLable.Name = "UploadLable";
-            UploadLable.Size = new Size(68, 15);
+            UploadLable.Size = new Size(71, 15);
             UploadLable.TabIndex = 2;
-            UploadLable.Text = "Upload File";
+            UploadLable.Text = "Upload File:";
             // 
             // ResoucePackPath
             // 
             ResoucePackPath.AutoSize = true;
             ResoucePackPath.BackColor = Color.Transparent;
             ResoucePackPath.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            ResoucePackPath.Location = new Point(12, 93);
+            ResoucePackPath.Location = new Point(13, 117);
             ResoucePackPath.Name = "ResoucePackPath";
-            ResoucePackPath.Size = new Size(116, 15);
+            ResoucePackPath.Size = new Size(119, 15);
             ResoucePackPath.TabIndex = 4;
-            ResoucePackPath.Text = "Resource Pack Path";
+            ResoucePackPath.Text = "Resource Pack Path:";
             // 
             // ResourcePackPathBox
             // 
             ResourcePackPathBox.AccessibleDescription = "";
             ResourcePackPathBox.AllowDrop = true;
             ResourcePackPathBox.Enabled = false;
-            ResourcePackPathBox.Location = new Point(128, 90);
+            ResourcePackPathBox.Location = new Point(140, 114);
             ResourcePackPathBox.Name = "ResourcePackPathBox";
-            ResourcePackPathBox.Size = new Size(411, 23);
+            ResourcePackPathBox.Size = new Size(415, 23);
             ResourcePackPathBox.TabIndex = 6;
             ResourcePackPathBox.Tag = "";
             // 
@@ -158,26 +159,26 @@
             DataPackPathLable.AutoSize = true;
             DataPackPathLable.BackColor = Color.Transparent;
             DataPackPathLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            DataPackPathLable.Location = new Point(12, 122);
+            DataPackPathLable.Location = new Point(13, 89);
             DataPackPathLable.Name = "DataPackPathLable";
-            DataPackPathLable.Size = new Size(90, 15);
+            DataPackPathLable.Size = new Size(93, 15);
             DataPackPathLable.TabIndex = 6;
-            DataPackPathLable.Text = "Data Pack Path";
+            DataPackPathLable.Text = "Data Pack Path:";
             // 
             // DataPackPathBox
             // 
             DataPackPathBox.AccessibleDescription = "";
             DataPackPathBox.AllowDrop = true;
             DataPackPathBox.Enabled = false;
-            DataPackPathBox.Location = new Point(104, 119);
+            DataPackPathBox.Location = new Point(114, 85);
             DataPackPathBox.Name = "DataPackPathBox";
-            DataPackPathBox.Size = new Size(435, 23);
+            DataPackPathBox.Size = new Size(441, 23);
             DataPackPathBox.TabIndex = 8;
             DataPackPathBox.Tag = "";
             // 
             // ConvertButton
             // 
-            ConvertButton.Location = new Point(101, 594);
+            ConvertButton.Location = new Point(111, 601);
             ConvertButton.Name = "ConvertButton";
             ConvertButton.Size = new Size(75, 24);
             ConvertButton.TabIndex = 23;
@@ -190,17 +191,17 @@
             PackNameLable.AutoSize = true;
             PackNameLable.BackColor = Color.Transparent;
             PackNameLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            PackNameLable.Location = new Point(12, 156);
+            PackNameLable.Location = new Point(13, 156);
             PackNameLable.Name = "PackNameLable";
-            PackNameLable.Size = new Size(69, 15);
+            PackNameLable.Size = new Size(72, 15);
             PackNameLable.TabIndex = 9;
-            PackNameLable.Text = "Pack Name";
+            PackNameLable.Text = "Pack Name:";
             // 
             // PackNameTextBox
             // 
             PackNameTextBox.AccessibleDescription = "";
             PackNameTextBox.AllowDrop = true;
-            PackNameTextBox.Location = new Point(86, 153);
+            PackNameTextBox.Location = new Point(95, 153);
             PackNameTextBox.Name = "PackNameTextBox";
             PackNameTextBox.Size = new Size(95, 23);
             PackNameTextBox.TabIndex = 10;
@@ -211,57 +212,57 @@
             ScaleLable.AutoSize = true;
             ScaleLable.BackColor = Color.Transparent;
             ScaleLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            ScaleLable.Location = new Point(25, 185);
+            ScaleLable.Location = new Point(13, 184);
             ScaleLable.Name = "ScaleLable";
-            ScaleLable.Size = new Size(36, 15);
+            ScaleLable.Size = new Size(77, 15);
             ScaleLable.TabIndex = 11;
-            ScaleLable.Text = "Scale";
+            ScaleLable.Text = "Image Scale:";
             // 
             // WidthLable
             // 
             WidthLable.AutoSize = true;
             WidthLable.BackColor = Color.Transparent;
             WidthLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            WidthLable.Location = new Point(9, 267);
+            WidthLable.Location = new Point(13, 267);
             WidthLable.Name = "WidthLable";
-            WidthLable.Size = new Size(79, 15);
+            WidthLable.Size = new Size(82, 15);
             WidthLable.TabIndex = 13;
-            WidthLable.Text = "Image Width";
+            WidthLable.Text = "Image Width:";
             // 
             // HeightLable
             // 
             HeightLable.AutoSize = true;
             HeightLable.BackColor = Color.Transparent;
             HeightLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            HeightLable.Location = new Point(5, 296);
+            HeightLable.Location = new Point(13, 296);
             HeightLable.Name = "HeightLable";
-            HeightLable.Size = new Size(83, 15);
+            HeightLable.Size = new Size(86, 15);
             HeightLable.TabIndex = 15;
-            HeightLable.Text = "Image Height";
+            HeightLable.Text = "Image Height:";
             // 
             // StartTimeLable
             // 
             StartTimeLable.AutoSize = true;
             StartTimeLable.BackColor = Color.Transparent;
             StartTimeLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            StartTimeLable.Location = new Point(-2, 419);
+            StartTimeLable.Location = new Point(13, 419);
             StartTimeLable.Margin = new Padding(0, 3, 0, 3);
             StartTimeLable.Name = "StartTimeLable";
-            StartTimeLable.Size = new Size(64, 15);
+            StartTimeLable.Size = new Size(67, 15);
             StartTimeLable.TabIndex = 17;
-            StartTimeLable.Text = "Start time";
+            StartTimeLable.Text = "Start time:";
             // 
             // ScaleOverrideCheckBox
             // 
             ScaleOverrideCheckBox.AutoSize = true;
             ScaleOverrideCheckBox.BackColor = Color.Transparent;
             ScaleOverrideCheckBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            ScaleOverrideCheckBox.Location = new Point(27, 240);
+            ScaleOverrideCheckBox.Location = new Point(13, 240);
             ScaleOverrideCheckBox.Name = "ScaleOverrideCheckBox";
             ScaleOverrideCheckBox.RightToLeft = RightToLeft.Yes;
             ScaleOverrideCheckBox.Size = new Size(130, 19);
             ScaleOverrideCheckBox.TabIndex = 12;
-            ScaleOverrideCheckBox.Text = "Use Width/Height ";
+            ScaleOverrideCheckBox.Text = ":Use Width/Height";
             ScaleOverrideCheckBox.UseVisualStyleBackColor = false;
             ScaleOverrideCheckBox.CheckedChanged += ScaleOverrideCheckBox_CheckedChanged;
             // 
@@ -269,7 +270,7 @@
             // 
             StartSecondsTextBox.AccessibleDescription = "";
             StartSecondsTextBox.AllowDrop = true;
-            StartSecondsTextBox.Location = new Point(138, 416);
+            StartSecondsTextBox.Location = new Point(161, 416);
             StartSecondsTextBox.Margin = new Padding(0, 3, 0, 3);
             StartSecondsTextBox.MaxLength = 2;
             StartSecondsTextBox.Name = "StartSecondsTextBox";
@@ -284,7 +285,7 @@
             // 
             StartMinutesTextBox.AccessibleDescription = "";
             StartMinutesTextBox.AllowDrop = true;
-            StartMinutesTextBox.Location = new Point(99, 416);
+            StartMinutesTextBox.Location = new Point(122, 416);
             StartMinutesTextBox.Margin = new Padding(0, 3, 0, 3);
             StartMinutesTextBox.MaxLength = 2;
             StartMinutesTextBox.Name = "StartMinutesTextBox";
@@ -299,7 +300,7 @@
             // 
             StartHoursTextBox.AccessibleDescription = "";
             StartHoursTextBox.AllowDrop = true;
-            StartHoursTextBox.Location = new Point(60, 416);
+            StartHoursTextBox.Location = new Point(83, 416);
             StartHoursTextBox.Margin = new Padding(0, 3, 0, 3);
             StartHoursTextBox.MaxLength = 2;
             StartHoursTextBox.Name = "StartHoursTextBox";
@@ -314,7 +315,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(89, 419);
+            label2.Location = new Point(112, 419);
             label2.Margin = new Padding(0, 3, 0, 3);
             label2.Name = "label2";
             label2.Size = new Size(10, 15);
@@ -325,7 +326,7 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Location = new Point(128, 419);
+            label3.Location = new Point(151, 419);
             label3.Margin = new Padding(0, 3, 0, 3);
             label3.Name = "label3";
             label3.Size = new Size(10, 15);
@@ -336,7 +337,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(128, 448);
+            label1.Location = new Point(151, 448);
             label1.Margin = new Padding(0, 3, 0, 3);
             label1.Name = "label1";
             label1.Size = new Size(10, 15);
@@ -347,7 +348,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Location = new Point(89, 448);
+            label4.Location = new Point(112, 448);
             label4.Margin = new Padding(0, 3, 0, 3);
             label4.Name = "label4";
             label4.Size = new Size(10, 15);
@@ -358,7 +359,7 @@
             // 
             EndHoursTextBox.AccessibleDescription = "";
             EndHoursTextBox.AllowDrop = true;
-            EndHoursTextBox.Location = new Point(60, 445);
+            EndHoursTextBox.Location = new Point(83, 445);
             EndHoursTextBox.Margin = new Padding(0, 3, 0, 3);
             EndHoursTextBox.MaxLength = 2;
             EndHoursTextBox.Name = "EndHoursTextBox";
@@ -373,7 +374,7 @@
             // 
             EndMinutesTextBox.AccessibleDescription = "";
             EndMinutesTextBox.AllowDrop = true;
-            EndMinutesTextBox.Location = new Point(99, 445);
+            EndMinutesTextBox.Location = new Point(122, 445);
             EndMinutesTextBox.Margin = new Padding(0, 3, 0, 3);
             EndMinutesTextBox.MaxLength = 2;
             EndMinutesTextBox.Name = "EndMinutesTextBox";
@@ -388,7 +389,7 @@
             // 
             EndSecondsTextBox.AccessibleDescription = "";
             EndSecondsTextBox.AllowDrop = true;
-            EndSecondsTextBox.Location = new Point(138, 445);
+            EndSecondsTextBox.Location = new Point(161, 445);
             EndSecondsTextBox.Margin = new Padding(0, 3, 0, 3);
             EndSecondsTextBox.MaxLength = 2;
             EndSecondsTextBox.Name = "EndSecondsTextBox";
@@ -404,19 +405,19 @@
             EndAtLable.AutoSize = true;
             EndAtLable.BackColor = Color.Transparent;
             EndAtLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            EndAtLable.Location = new Point(-2, 448);
+            EndAtLable.Location = new Point(13, 448);
             EndAtLable.Margin = new Padding(0, 3, 0, 3);
             EndAtLable.Name = "EndAtLable";
-            EndAtLable.Size = new Size(56, 15);
+            EndAtLable.Size = new Size(59, 15);
             EndAtLable.TabIndex = 27;
-            EndAtLable.Text = "End time";
+            EndAtLable.Text = "End time:";
             // 
             // PreviewImage
             // 
             PreviewImage.BackColor = Color.Transparent;
-            PreviewImage.Location = new Point(187, 156);
+            PreviewImage.Location = new Point(198, 151);
             PreviewImage.Name = "PreviewImage";
-            PreviewImage.Size = new Size(480, 480);
+            PreviewImage.Size = new Size(483, 469);
             PreviewImage.TabIndex = 33;
             PreviewImage.TabStop = false;
             // 
@@ -425,17 +426,17 @@
             OutputPathLable.AutoSize = true;
             OutputPathLable.BackColor = Color.Transparent;
             OutputPathLable.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            OutputPathLable.Location = new Point(12, 38);
+            OutputPathLable.Location = new Point(13, 38);
             OutputPathLable.Name = "OutputPathLable";
-            OutputPathLable.Size = new Size(75, 15);
+            OutputPathLable.Size = new Size(78, 15);
             OutputPathLable.TabIndex = 35;
-            OutputPathLable.Text = "Output Path";
+            OutputPathLable.Text = "Output Path:";
             // 
             // OutputPathTextBox
             // 
             OutputPathTextBox.AccessibleDescription = "";
             OutputPathTextBox.AllowDrop = true;
-            OutputPathTextBox.Location = new Point(90, 35);
+            OutputPathTextBox.Location = new Point(103, 35);
             OutputPathTextBox.Name = "OutputPathTextBox";
             OutputPathTextBox.Size = new Size(449, 23);
             OutputPathTextBox.TabIndex = 3;
@@ -446,12 +447,12 @@
             AutoInstallCheckBox.AutoSize = true;
             AutoInstallCheckBox.BackColor = Color.Transparent;
             AutoInstallCheckBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            AutoInstallCheckBox.Location = new Point(12, 64);
+            AutoInstallCheckBox.Location = new Point(13, 64);
             AutoInstallCheckBox.Name = "AutoInstallCheckBox";
             AutoInstallCheckBox.RightToLeft = RightToLeft.Yes;
-            AutoInstallCheckBox.Size = new Size(89, 19);
+            AutoInstallCheckBox.Size = new Size(92, 19);
             AutoInstallCheckBox.TabIndex = 5;
-            AutoInstallCheckBox.Text = "Auto Install";
+            AutoInstallCheckBox.Text = ":Auto Install";
             toolTip1.SetToolTip(AutoInstallCheckBox, resources.GetString("AutoInstallCheckBox.ToolTip"));
             AutoInstallCheckBox.UseVisualStyleBackColor = false;
             AutoInstallCheckBox.CheckedChanged += AutoInstallCheckBox_CheckedChanged;
@@ -462,7 +463,7 @@
             // 
             // BrowseButton
             // 
-            BrowseButton.Location = new Point(545, 6);
+            BrowseButton.Location = new Point(558, 6);
             BrowseButton.Name = "BrowseButton";
             BrowseButton.Size = new Size(54, 23);
             BrowseButton.TabIndex = 2;
@@ -474,7 +475,7 @@
             // 
             VideoSlider.BackColor = SystemColors.Control;
             VideoSlider.Enabled = false;
-            VideoSlider.Location = new Point(8, 543);
+            VideoSlider.Location = new Point(18, 552);
             VideoSlider.Name = "VideoSlider";
             VideoSlider.Size = new Size(168, 45);
             VideoSlider.TabIndex = 22;
@@ -482,7 +483,7 @@
             // 
             // OutputBrowse
             // 
-            OutputBrowse.Location = new Point(545, 38);
+            OutputBrowse.Location = new Point(558, 38);
             OutputBrowse.Name = "OutputBrowse";
             OutputBrowse.Size = new Size(54, 23);
             OutputBrowse.TabIndex = 4;
@@ -492,7 +493,7 @@
             // 
             // DataPackBrowse
             // 
-            DataPackBrowse.Location = new Point(545, 119);
+            DataPackBrowse.Location = new Point(558, 85);
             DataPackBrowse.Name = "DataPackBrowse";
             DataPackBrowse.Size = new Size(54, 23);
             DataPackBrowse.TabIndex = 9;
@@ -505,19 +506,19 @@
             EndAudioOnLastFrameCheckBox.AutoSize = true;
             EndAudioOnLastFrameCheckBox.BackColor = Color.Transparent;
             EndAudioOnLastFrameCheckBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            EndAudioOnLastFrameCheckBox.Location = new Point(-2, 518);
+            EndAudioOnLastFrameCheckBox.Location = new Point(13, 516);
             EndAudioOnLastFrameCheckBox.Name = "EndAudioOnLastFrameCheckBox";
             EndAudioOnLastFrameCheckBox.RightToLeft = RightToLeft.Yes;
-            EndAudioOnLastFrameCheckBox.Size = new Size(161, 19);
+            EndAudioOnLastFrameCheckBox.Size = new Size(164, 19);
             EndAudioOnLastFrameCheckBox.TabIndex = 21;
-            EndAudioOnLastFrameCheckBox.Text = "End Audio on Last Frame";
+            EndAudioOnLastFrameCheckBox.Text = ":End Audio on Last Frame";
             toolTip1.SetToolTip(EndAudioOnLastFrameCheckBox, "Whether to end the audio when there are no more frames to show.");
             EndAudioOnLastFrameCheckBox.UseVisualStyleBackColor = false;
             // 
             // StatusLabel
             // 
             StatusLabel.AutoSize = true;
-            StatusLabel.Location = new Point(12, 621);
+            StatusLabel.Location = new Point(10, 629);
             StatusLabel.Name = "StatusLabel";
             StatusLabel.Size = new Size(0, 15);
             StatusLabel.TabIndex = 43;
@@ -527,7 +528,7 @@
             FileDurationLabelLabel.AutoSize = true;
             FileDurationLabelLabel.BackColor = Color.Transparent;
             FileDurationLabelLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            FileDurationLabelLabel.Location = new Point(-2, 471);
+            FileDurationLabelLabel.Location = new Point(13, 471);
             FileDurationLabelLabel.Name = "FileDurationLabelLabel";
             FileDurationLabelLabel.Size = new Size(79, 15);
             FileDurationLabelLabel.TabIndex = 0;
@@ -536,7 +537,7 @@
             // FileDurationLabel
             // 
             FileDurationLabel.AutoSize = true;
-            FileDurationLabel.Location = new Point(76, 471);
+            FileDurationLabel.Location = new Point(111, 471);
             FileDurationLabel.Name = "FileDurationLabel";
             FileDurationLabel.Size = new Size(49, 15);
             FileDurationLabel.TabIndex = 44;
@@ -544,7 +545,7 @@
             // 
             // ReloadPreviewButton
             // 
-            ReloadPreviewButton.Location = new Point(-2, 489);
+            ReloadPreviewButton.Location = new Point(10, 489);
             ReloadPreviewButton.Name = "ReloadPreviewButton";
             ReloadPreviewButton.Size = new Size(96, 24);
             ReloadPreviewButton.TabIndex = 45;
@@ -557,15 +558,15 @@
             TPSLabel.AutoSize = true;
             TPSLabel.BackColor = Color.Transparent;
             TPSLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            TPSLabel.Location = new Point(-1, 389);
+            TPSLabel.Location = new Point(13, 383);
             TPSLabel.Name = "TPSLabel";
-            TPSLabel.Size = new Size(101, 15);
+            TPSLabel.Size = new Size(104, 15);
             TPSLabel.TabIndex = 46;
-            TPSLabel.Text = "Ticks per Second";
+            TPSLabel.Text = "Ticks per Second:";
             // 
             // TicksPerSecondUpDown
             // 
-            TicksPerSecondUpDown.Location = new Point(100, 387);
+            TicksPerSecondUpDown.Location = new Point(134, 383);
             TicksPerSecondUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             TicksPerSecondUpDown.Name = "TicksPerSecondUpDown";
             TicksPerSecondUpDown.Size = new Size(56, 23);
@@ -578,7 +579,7 @@
             ScreenWidthUpDown.DecimalPlaces = 2;
             ScreenWidthUpDown.Enabled = false;
             ScreenWidthUpDown.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            ScreenWidthUpDown.Location = new Point(90, 323);
+            ScreenWidthUpDown.Location = new Point(119, 323);
             ScreenWidthUpDown.Maximum = new decimal(new int[] { 4, 0, 0, 0 });
             ScreenWidthUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
             ScreenWidthUpDown.Name = "ScreenWidthUpDown";
@@ -593,7 +594,7 @@
             ScreenHeightUpDown.DecimalPlaces = 2;
             ScreenHeightUpDown.Enabled = false;
             ScreenHeightUpDown.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            ScreenHeightUpDown.Location = new Point(89, 352);
+            ScreenHeightUpDown.Location = new Point(119, 352);
             ScreenHeightUpDown.Maximum = new decimal(new int[] { 4, 0, 0, 0 });
             ScreenHeightUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
             ScreenHeightUpDown.Name = "ScreenHeightUpDown";
@@ -607,7 +608,7 @@
             // 
             ScreenScaleUpDown.DecimalPlaces = 2;
             ScreenScaleUpDown.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            ScreenScaleUpDown.Location = new Point(86, 211);
+            ScreenScaleUpDown.Location = new Point(95, 211);
             ScreenScaleUpDown.Maximum = new decimal(new int[] { 4, 0, 0, 0 });
             ScreenScaleUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
             ScreenScaleUpDown.Name = "ScreenScaleUpDown";
@@ -619,7 +620,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(99, 489);
+            button1.Location = new Point(109, 489);
             button1.Name = "button1";
             button1.Size = new Size(77, 24);
             button1.TabIndex = 48;
@@ -632,39 +633,39 @@
             ScreenScaleLabel.AutoSize = true;
             ScreenScaleLabel.BackColor = Color.Transparent;
             ScreenScaleLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            ScreenScaleLabel.Location = new Point(6, 214);
+            ScreenScaleLabel.Location = new Point(13, 213);
             ScreenScaleLabel.Name = "ScreenScaleLabel";
-            ScreenScaleLabel.Size = new Size(78, 15);
+            ScreenScaleLabel.Size = new Size(81, 15);
             ScreenScaleLabel.TabIndex = 49;
-            ScreenScaleLabel.Text = "Screen Scale";
+            ScreenScaleLabel.Text = "Screen Scale:";
             // 
             // ScreenWidthLabel
             // 
             ScreenWidthLabel.AutoSize = true;
             ScreenWidthLabel.BackColor = Color.Transparent;
             ScreenWidthLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            ScreenWidthLabel.Location = new Point(7, 327);
+            ScreenWidthLabel.Location = new Point(13, 325);
             ScreenWidthLabel.Name = "ScreenWidthLabel";
-            ScreenWidthLabel.Size = new Size(83, 15);
+            ScreenWidthLabel.Size = new Size(86, 15);
             ScreenWidthLabel.TabIndex = 51;
-            ScreenWidthLabel.Text = "Screen Width";
+            ScreenWidthLabel.Text = "Screen Width:";
             // 
             // ScreenHeightLabel
             // 
             ScreenHeightLabel.AutoSize = true;
             ScreenHeightLabel.BackColor = Color.Transparent;
             ScreenHeightLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            ScreenHeightLabel.Location = new Point(6, 356);
+            ScreenHeightLabel.Location = new Point(13, 354);
             ScreenHeightLabel.Name = "ScreenHeightLabel";
-            ScreenHeightLabel.Size = new Size(87, 15);
+            ScreenHeightLabel.Size = new Size(90, 15);
             ScreenHeightLabel.TabIndex = 56;
-            ScreenHeightLabel.Text = "Screen Height";
+            ScreenHeightLabel.Text = "Screen Height:";
             // 
             // ScaleUpDown
             // 
             ScaleUpDown.DecimalPlaces = 2;
             ScaleUpDown.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            ScaleUpDown.Location = new Point(86, 182);
+            ScaleUpDown.Location = new Point(95, 182);
             ScaleUpDown.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
             ScaleUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
             ScaleUpDown.Name = "ScaleUpDown";
@@ -677,7 +678,7 @@
             // WidthUpDown
             // 
             WidthUpDown.Enabled = false;
-            WidthUpDown.Location = new Point(89, 265);
+            WidthUpDown.Location = new Point(119, 265);
             WidthUpDown.Maximum = new decimal(new int[] { 1316134912, 2328, 0, 0 });
             WidthUpDown.Name = "WidthUpDown";
             WidthUpDown.Size = new Size(71, 23);
@@ -688,7 +689,7 @@
             // HeightUpDown
             // 
             HeightUpDown.Enabled = false;
-            HeightUpDown.Location = new Point(90, 294);
+            HeightUpDown.Location = new Point(120, 294);
             HeightUpDown.Maximum = new decimal(new int[] { 1316134912, 2328, 0, 0 });
             HeightUpDown.Name = "HeightUpDown";
             HeightUpDown.Size = new Size(70, 23);
@@ -698,7 +699,7 @@
             // CancelButton
             // 
             CancelButton.Enabled = false;
-            CancelButton.Location = new Point(12, 595);
+            CancelButton.Location = new Point(22, 602);
             CancelButton.Name = "CancelButton";
             CancelButton.Size = new Size(75, 23);
             CancelButton.TabIndex = 62;
@@ -723,7 +724,7 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(640, 6);
+            pictureBox1.Location = new Point(653, 6);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(24, 24);
             pictureBox1.TabIndex = 63;
@@ -735,7 +736,7 @@
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(610, 38);
+            pictureBox2.Location = new Point(623, 38);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(24, 24);
             pictureBox2.TabIndex = 64;
@@ -747,7 +748,7 @@
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Cursor = Cursors.Hand;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(610, 6);
+            pictureBox4.Location = new Point(623, 6);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(24, 24);
             pictureBox4.TabIndex = 66;
@@ -759,7 +760,7 @@
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Cursor = Cursors.Hand;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(640, 38);
+            pictureBox3.Location = new Point(653, 38);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(24, 24);
             pictureBox3.TabIndex = 65;
@@ -768,7 +769,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(610, 68);
+            button2.Location = new Point(623, 68);
             button2.Name = "button2";
             button2.Size = new Size(57, 23);
             button2.TabIndex = 67;
@@ -776,13 +777,25 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += HelpButton_Click;
             // 
+            // SeekLabel
+            // 
+            SeekLabel.AutoSize = true;
+            SeekLabel.BackColor = Color.Transparent;
+            SeekLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SeekLabel.Location = new Point(18, 535);
+            SeekLabel.Name = "SeekLabel";
+            SeekLabel.Size = new Size(38, 15);
+            SeekLabel.TabIndex = 0;
+            SeekLabel.Text = "Seek:";
+            // 
             // V2MC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(678, 647);
+            ClientSize = new Size(699, 647);
+            Controls.Add(SeekLabel);
             Controls.Add(button2);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
@@ -925,5 +938,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private Button button2;
+        private Label SeekLabel;
     }
 }

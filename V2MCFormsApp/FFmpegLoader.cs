@@ -131,7 +131,7 @@ namespace V2MCFormsApp
                         {
                             DownloadFFmpeg();
                         }
-                        catch (Exception ex)
+                        catch 
                         {
                             switch (MessageBox.Show("There was a problem downloading FFmpeg. Do you want to retry?", "Download Error", MessageBoxButtons.YesNo))
                             {
@@ -178,7 +178,7 @@ namespace V2MCFormsApp
             }
             catch (TaskCanceledException tc)
             {
-                MessageBox.Show("Download canceled.");
+                MessageBox.Show("Download canceled:" + tc.Message);
             }
         }
         public static void DownloadFFmpeg()
