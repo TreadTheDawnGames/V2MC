@@ -34,11 +34,14 @@ If you get an error after loading the resource pack, or see a black and purple C
 
 4: Tick "End Audio on Last Frame" to prevent converting extra audio
 
+## Legal
+This project uses [FFmpegCore](https://github.com/rosenbjerg/FFMpegCore) and [ImageMagick.NET](https://github.com/dlemstra/Magick.NET) NuGet packages.
+
+FFmpeg website: https://ffmpeg.org/
+
+ImageMagick website: https://imagemagick.org/
+
+Some rights reserved: Except for FFmpeg, FFProbe, and ImageMagick, this work is protected by [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 ## Notes
-This project uses FFmpeg, FFprobe and ImageMagick.NET.
-
-https://ffmpeg.org/
-
-https://imagemagick.org/
-
-Tested with FFmpeg 6.1.
+Tested with FFmpeg 6.0
