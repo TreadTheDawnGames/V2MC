@@ -35,6 +35,8 @@ If you get an error after loading the resource pack, or see a black and purple C
 4: Tick "End Audio on Last Frame" to prevent converting extra audio
 
 ## Legal
+I do not condone piracy! Do not redistribute copyrighted works using this software.<b>
+
 This project uses [FFmpegCore](https://github.com/rosenbjerg/FFMpegCore) and [ImageMagick.NET](https://github.com/dlemstra/Magick.NET) NuGet packages.
 
 FFmpeg website: https://ffmpeg.org/
